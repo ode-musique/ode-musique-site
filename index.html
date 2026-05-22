@@ -287,7 +287,7 @@
 
         /* ─── ON JOUE OÙ ─── */
         .prestations-grid {
-            display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+            display: grid; grid-template-columns: repeat(2,1fr); gap: 2px;
             margin-top: 64px;
             border-radius: 24px; overflow: hidden;
         }
@@ -518,6 +518,62 @@
             .social-strip { padding: 48px 24px; }
             .form-row-2 { grid-template-columns: 1fr; }
         }
+
+        /* ─── PRESSE ─── */
+        .presse-grid {
+            display: grid; grid-template-columns: repeat(3,1fr);
+            gap: 24px; margin-top: 56px;
+        }
+        .presse-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 20px; padding: 36px 32px;
+            text-decoration: none; color: var(--ink);
+            display: flex; flex-direction: column; gap: 16px;
+            transition: box-shadow .25s, border-color .25s, transform .2s;
+        }
+        .presse-card:hover {
+            box-shadow: 0 16px 40px rgba(14,26,36,.08);
+            border-color: var(--orange);
+            transform: translateY(-4px);
+        }
+        .presse-source {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .presse-logo {
+            font-family: 'Poppins', sans-serif; font-weight: 800;
+            font-size: 15px; color: var(--navy);
+        }
+        .presse-date {
+            font-size: 12px; color: var(--muted);
+            background: var(--off); padding: 3px 10px;
+            border-radius: 100px;
+        }
+        .presse-quote {
+            font-size: 15px; color: var(--muted); line-height: 1.65;
+            font-style: italic; flex: 1;
+            border-left: 3px solid var(--orange); padding-left: 14px;
+        }
+        .presse-event {
+            font-size: 13px; font-weight: 600; color: var(--navy);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .presse-event i { color: var(--orange); }
+        .presse-card--featured {
+            border-color: var(--orange);
+            background: linear-gradient(135deg, rgba(249,115,22,.03) 0%, var(--white) 100%);
+        }
+        .presse-cta {
+            font-size: 13px; font-weight: 700; color: var(--orange);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .presse-note {
+            margin-top: 32px; font-size: 13px; color: var(--muted);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .presse-note i { color: var(--cyan); }
+        .presse-note a { color: var(--orange); text-decoration: none; }
+        .presse-note a:hover { text-decoration: underline; }
+        @media (max-width: 960px) { .presse-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -555,7 +611,7 @@
                 <span class="thin">c'est le deal.</span>
             </h1>
             <p class="hero-sub">
-                Une quinzaine de musiciens passionnés qui répètent le premier mercredi du mois et jouent aux quatre coins du Rhône. Des cuivres, des saxos, de la clarinette, de la percussion - et un répertoire qui va des bandas aux hits d'aujourd'hui.
+                15 musiciens permanents, capables de fédérer jusqu'à 30 musiciens sur scène pour les plus grands événements. Des cuivres, des saxos, de la clarinette, de la percussion - et un répertoire qui va des bandas aux hits d'aujourd'hui.
             </p>
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-orange"><i class="fa-solid fa-calendar-check"></i> Nous réserver</a>
@@ -564,12 +620,12 @@
         </div>
         <div class="hero-right">
             <div class="hero-stat">
-                <div class="hero-stat-num">~15<span></span></div>
-                <div class="hero-stat-label">musiciens passionnés</div>
+                <div class="hero-stat-num">15<span style="font-size:28px;color:rgba(255,255,255,.4)">+</span></div>
+                <div class="hero-stat-label">musiciens permanents</div>
             </div>
             <div class="hero-stat">
-                <div class="hero-stat-num"><span style="font-size:28px;color:rgba(255,255,255,.3)">Lyon</span></div>
-                <div class="hero-stat-label">& tout le Rhône</div>
+                <div class="hero-stat-num" style="font-size:28px;line-height:1.2;color:var(--white)">Lyon<br><span style="color:var(--orange)">&</span> Rhône</div>
+                <div class="hero-stat-label">et départements limitrophes</div>
             </div>
             <div class="hero-stat">
                 <div class="hero-stat-num">100<span style="font-size:28px">%</span></div>
@@ -594,8 +650,8 @@
             <div class="about-copy">
                 <p class="sec-label">La fanfare</p>
                 <h2 class="sec-title">Une bande de potes avec des instruments.</h2>
-                <p style="margin-top:28px">Au départ, c'est simple : <strong>une quinzaine d'amis qui aiment jouer ensemble</strong>. Pas de prises de tête, pas de costume étriqué juste l'envie de faire vibrer les gens.</p>
-                <p>Basés à <strong>Saint-Romain-au-Mont-d'Or</strong>, on sillonne le Rhône, l'Ain, l'Isère et tout ce qui se passe autour de Lyon. <em>Fêtes de village, festivals, mariages, événements sportifs</em> si vous cherchez une fanfare qui joue juste et fait danser tout le monde, vous êtes au bon endroit.</p>
+                <p style="margin-top:28px">Au départ, c'est simple : <strong>15 amis qui aiment jouer ensemble</strong>. Pas de prises de tête, pas de costume étriqué - juste l'envie de partager la musique.</p>
+                <p>Basés à <strong>Saint-Romain-au-Mont-d'Or</strong>, on sillonne Lyon, le Rhône et les départements limitrophes. <em>Fêtes de village, festivals, mariages, événements sportifs</em> si vous cherchez une fanfare qui joue juste et fait danser tout le monde, vous êtes au bon endroit.</p>
                 <p>Notre truc ? Un répertoire éclectique assumé des bandas aux hits actuels et une énergie de scène qui ne laisse personne assis.</p>
                 <a href="#contact" class="btn btn-outline-dark" style="margin-top:12px">
                     <i class="fa-solid fa-envelope"></i> Discutons de votre événement
@@ -642,7 +698,7 @@
                 <div class="prest-title">Conscrits & Fêtes de village</div>
                 <div class="prest-body">Notre terrain de jeu historique. Défilés, déambulations dans les rues, animation de place. On connaît l'exercice par cœur.</div>
                 <div class="prest-tags">
-                    <span>Conscrits</span>
+                    <span>Conscrits</span><span>Fêtes de village</span>
                 </div>
             </div>
             <div class="prest-card">
@@ -699,7 +755,7 @@
             <div class="ref-card">
                 <div class="ref-year">2024 · 2025</div>
                 <div class="ref-name">Festival Lumière</div>
-                <div class="ref-desc">Cérémonie d'ouverture à la Halle Tony Garnier. On a fait vibrer la salle en fanfare aux côtés des bénévoles et joué Morricone devant des milliers de cinéphiles.</div>
+                <div class="ref-desc">Cérémonie d'ouverture à la Halle Tony Garnier. On a animé la cérémonie d'ouverture en fanfare au milieu des bénévoles et du public.</div>
             </div>
             <div class="ref-card">
                 <div class="ref-year">Depuis 2022</div>
@@ -757,6 +813,64 @@
 </section>
 
 <!-- ─── SOCIAL STRIP ─── -->
+<!-- ─── ON PARLE DE NOUS ─── -->
+<section id="presse" style="background:var(--off)">
+    <div class="container">
+        <p class="sec-label">On parle de nous</p>
+        <h2 class="sec-title">Vus et <span class="o">entendus.</span></h2>
+        <p class="sec-sub">Quelques traces de nos passages dans les médias.</p>
+
+        <div class="presse-grid">
+
+            <a href="https://www.leprogres.fr/culture-loisirs/2022/04/03/les-56-conscrits-de-la-2-de-deux-villages-reunis" target="_blank" rel="noopener noreferrer" class="presse-card">
+                <div class="presse-source">
+                    <span class="presse-logo"><i class="fa-solid fa-newspaper"></i> Le Progrès</span>
+                    <span class="presse-date">Avril 2022</span>
+                </div>
+                <p class="presse-quote">"Les 56 conscrits de la 2e de deux villages réunis" - l'ODE en fanfare pour les célébrations.</p>
+                <div class="presse-event"><i class="fa-solid fa-champagne-glasses"></i> Conscrits</div>
+                <div class="presse-cta">Lire l'article <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://www.leprogres.fr/sport/2022/05/12/course-sur-route-la-villageoise-de-retour-les-21-et-22-mai" target="_blank" rel="noopener noreferrer" class="presse-card">
+                <div class="presse-source">
+                    <span class="presse-logo"><i class="fa-solid fa-newspaper"></i> Le Progrès</span>
+                    <span class="presse-date">Mai 2022</span>
+                </div>
+                <p class="presse-quote">"La Villageoise de retour les 21 et 22 mai" - l'ODE à l'animation musicale de la course.</p>
+                <div class="presse-event"><i class="fa-solid fa-person-running"></i> Événement sportif</div>
+                <div class="presse-cta">Lire l'article <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://www.leprogres.fr/culture-loisirs/2022/09/03/venez-ecouter-l-orchestre-des-essoufles-ce-dimanche-4-septembre" target="_blank" rel="noopener noreferrer" class="presse-card presse-card--featured">
+                <div class="presse-source">
+                    <span class="presse-logo"><i class="fa-solid fa-newspaper"></i> Le Progrès</span>
+                    <span class="presse-date">Septembre 2022</span>
+                </div>
+                <p class="presse-quote">"Venez écouter l'Orchestre des Essoufflés ce dimanche 4 septembre."</p>
+                <div class="presse-event"><i class="fa-solid fa-music"></i> Article dédié à l'ODE</div>
+                <div class="presse-cta">Lire l'article <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://www.lyonpremiere.fr/culture-et-divertissement/ouverture-du-festival-lumiere-une-soiree-eclatante-de-surprises/" target="_blank" rel="noopener noreferrer" class="presse-card">
+                <div class="presse-source">
+                    <span class="presse-logo"><i class="fa-solid fa-newspaper"></i> Lyon Première</span>
+                    <span class="presse-date">Octobre 2024</span>
+                </div>
+                <p class="presse-quote">"L'Orchestre des Essoufflés a accompagné les bénévoles du festival dans un tour de présentation en fanfare dans la Halle Tony Garnier."</p>
+                <div class="presse-event"><i class="fa-solid fa-film"></i> Festival Lumière 2024</div>
+                <div class="presse-cta">Lire l'article <i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+        </div>
+
+        <p class="presse-note">
+            <i class="fa-solid fa-circle-info"></i>
+            Vous nous avez vus quelque part ? Écrivez-nous à <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#111;&#100;&#101;&#45;&#109;&#117;&#115;&#105;&#113;&#117;&#101;&#46;&#102;&#114;">contact&#64;ode-musique.fr</a>
+        </p>
+    </div>
+</section>
+
 <div class="social-strip">
     <div class="social-inner">
         <div class="social-copy">
@@ -832,7 +946,7 @@
                     <div class="info-ico"><i class="fa-solid fa-map"></i></div>
                     <div class="info-txt">
                         <strong>Zone d'intervention</strong>
-                        <span>Lyon · Rhône · Ain · Isère<br>Loire · Saône-et-Loire</span>
+                        <span>Lyon, Rhône<br>et départements limitrophes</span>
                     </div>
                 </div>
             </div>
