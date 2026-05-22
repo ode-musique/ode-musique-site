@@ -1047,12 +1047,12 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <span>© 2025 ODE - L'Orchestre des Essoufflés</span>
+        <span>© <span id="copy-year"></span> ODE - L'Orchestre des Essoufflés</span>
     </div>
 </footer>
 
 <script>
-    // Siège ODE : Saint-Romain-au-Mont-d'Or
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
     const SIEGE_LAT = 45.8419, SIEGE_LNG = 4.8230;
 
     function haversine(lat1, lng1, lat2, lng2) {
